@@ -46,9 +46,9 @@ using namespace urdf;
 
 void printLink(const SegmentMap::const_iterator& link, const std::string& prefix)
 {
-  cout << prefix << "- Segment " << link->second.segment.getName() << " has " << link->second.children.size() << " children" << endl;
-  for (unsigned int i=0; i<link->second.children.size(); i++)
-    printLink(link->second.children[i], prefix + "  ");
+  cout << prefix << "- Segment " << link->second->segment.getName() << " has " << link->second->children.size() << " children" << endl;
+  for (unsigned int i=0; i<link->second->children.size(); i++)
+    printLink(link->second->children[i], prefix + "  ");
 }
 
 
